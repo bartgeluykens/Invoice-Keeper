@@ -1,4 +1,6 @@
 Invoice-Keeper
 ==============
 
-A little webapp to collect invoices.
+A web-application that will collect invoices.
+
+The intend is to expermiment with behaviour driven design.
