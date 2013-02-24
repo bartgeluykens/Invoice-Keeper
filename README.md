@@ -12,3 +12,5 @@ be.bartgeluykens.invoice.jbehave basic setup: http://be.bartgeluykens.invoice.jb
 http://www.hascode.com/2011/05/oh-be.bartgeluykens.invoice.jbehave-baby-behaviour-driven-development-using-be.bartgeluykens.invoice.jbehave/
 http://christophertownson.com/tag/bdd
 
+
+                   http://docs.jboss.org/hibernate/validator/4.2/reference/en-US/html/validator-gettingstarted.html

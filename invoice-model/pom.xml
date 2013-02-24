@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <groupId>be.bartgeluykens</groupId>
-   <artifactId>invoice-model</artifactId>
-   <packaging>pom</packaging>
-   <name>Invoice Model</name>
-   <version>0.0_SNAPSHOT</version>
-   <description>Invoice model</description>
-   <build>
-      <plugins>
-         <plugin>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <inherited>true</inherited>
-            <configuration>
-               <source>1.7</source>
-               <target>1.7</target>
-       		    <encoding>ISO-8859-1</encoding>
-            </configuration>
-         </plugin>
-      </plugins>
-   </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>be.bartgeluykens</groupId>
+    <artifactId>invoice-model</artifactId>
+    <packaging>jar</packaging>
+    <name>invoice-model</name>
+    <version>0.0_SNAPSHOT</version>
+    <organization>
+  			<name>Bart Geluykens Testing</name>
+  			<url>https://github.com/bartgeluykens</url>
+  		</organization>
+  	<licenses>
+  		<license>
+  			<name>GNU</name>
+  			<url>https://github.com/bartgeluykens/Invoice-Keeper/blob/master/LICENSE.md</url>
+  			<distribution>repo</distribution>
+  		</license>
+  	</licenses>
+  	<properties>
+  		<hibernate.version>4.1.9.Final</hibernate.version>
+  		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	</properties>
+
+    <!-- When removing the parent project configuration you have to explicitly set the dependencies version -->
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+      			<groupId>org.slf4j</groupId>
+      			<artifactId>slf4j-log4j12</artifactId>
+      			<version>1.6.4</version>
+      		</dependency>
+      		<dependency>
+      			<groupId>log4j</groupId>
+      			<artifactId>log4j</artifactId>
+      			<version>1.2.16</version>
+      		</dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>0.11.6</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <defaultGoal>test</defaultGoal>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <!-- When removing the parent project configuration this profile can be removed -->
+        <profile>
+            <id>archetype</id>
+            <activation>
+                <file>
+                    <exists>archetype.properties</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-archetype-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <repositories>
+        <repository>
+            <id>jboss-public-repository</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/public</url>
+        </repository>
+    </repositories>
 </project>

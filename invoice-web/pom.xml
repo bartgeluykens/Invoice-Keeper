@@ -22,7 +22,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>be.bartgeluykens</groupId>
 	<artifactId>invoice-web</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
     <version>0.0_SNAPSHOT</version>
     <description>Invoice behave</description>
 	<name>Invoice webpages</name>
@@ -43,6 +43,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
+        <dependency>
+            <groupId>be.bartgeluykens</groupId>
+            <artifactId>invoice-facade</artifactId>
+            <version>0.0_SNAPSHOT</version>
+      </dependency>
 		<!--  WICKET DEPENDENCIES -->
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
@@ -58,7 +63,7 @@
 		-->
 
 		<!-- LOGGING DEPENDENCIES - LOG4J -->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.6.4</version>
@@ -67,7 +72,15 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.16</version>
-		</dependency>
+		</dependency>  -->
+
+        <!-- hsqldb database -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.2.8</version>
+            <!-- scope>test</scope -->
+       </dependency>
 
 		<!--  JUNIT DEPENDENCY FOR TESTING -->
 		<dependency>
