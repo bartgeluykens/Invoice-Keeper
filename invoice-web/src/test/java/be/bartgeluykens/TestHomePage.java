@@ -1,5 +1,7 @@
 package be.bartgeluykens;
 
+import be.bartgeluykens.invoice.web.application.InvoiceWebApplication;
+import be.bartgeluykens.invoice.web.pages.HomePage;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +16,7 @@ public class TestHomePage
 	@Before
 	public void setUp()
 	{
-		tester = new WicketTester(new WicketApplication());
+		tester = new WicketTester(new InvoiceWebApplication());
 	}
 
 	@Test

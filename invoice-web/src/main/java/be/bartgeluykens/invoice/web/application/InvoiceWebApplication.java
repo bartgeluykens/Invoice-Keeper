@@ -1,6 +1,6 @@
 package be.bartgeluykens.invoice.web.application;
 
-import be.bartgeluykens.HomePage;
+import be.bartgeluykens.invoice.web.pages.HomePage;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 

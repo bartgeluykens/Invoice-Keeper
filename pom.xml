@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
-   <groupId>be</groupId>
+   <groupId>be.bartgeluykens</groupId>
    <artifactId>invoice-keeper</artifactId>
    <packaging>pom</packaging>
-   <name>Invoice MAIN</name>
+   <name>Invoice main project</name>
    <version>0.0_SNAPSHOT</version>
    <description>Invoice keeper</description>
    <build>
@@ -23,6 +23,8 @@
    </build>
    <modules>
        <module>invoice-model</module>
+       <module>invoice-facade</module>
+       <module>invoice-web</module>
        <module>invoice-behave</module>
    </modules>
 </project>
