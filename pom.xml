@@ -7,7 +7,7 @@
    <packaging>pom</packaging>
    <name>Invoice main project</name>
    <version>0.0_SNAPSHOT</version>
-   <description>Invoice keeper</description>
+   <description>A website to store invoices in order to view guarentee periods</description>
    <build>
       <plugins>
          <plugin>
