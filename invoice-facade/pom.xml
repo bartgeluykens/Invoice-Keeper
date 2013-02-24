@@ -3,11 +3,11 @@
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
    <groupId>be.bartgeluykens</groupId>
-   <artifactId>invoice-model</artifactId>
+   <artifactId>invoice-facade</artifactId>
    <packaging>pom</packaging>
-   <name>Invoice Model</name>
+   <name>Invoice facade</name>
    <version>0.0_SNAPSHOT</version>
-   <description>Invoice model</description>
+   <description>Invoice behave</description>
    <build>
       <plugins>
          <plugin>
