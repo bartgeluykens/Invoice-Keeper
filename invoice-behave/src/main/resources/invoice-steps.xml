@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="driverProvider" class="org.jbehave.web.selenium.FirefoxWebDriverProvider" >
+  </bean>
+  
+  <bean id="invoicePageFactory" class="be.bartgeluykens.invoice.jbehave.pages.InvoicePageFactory">
+     <constructor-arg ref="driverProvider"/>
+  </bean>  
+  
+  <bean id="lifecycleSteps" class="be.bartgeluykens.invoice.jbehave.helper.InvoiceSteps">
+     <constructor-arg ref="driverProvider"/>
+  </bean>  
+
+  <bean id="etsySteps" class="be.bartgeluykens.invoice.jbehave.steps.ViewAllInvoicesStory">
+     <constructor-arg ref="invoicePageFactory"/>
+  </bean>  
+
+</beans>
